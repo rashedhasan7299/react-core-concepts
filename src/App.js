@@ -3,24 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
-  var person = {
-    name: "Steve Smith",
-    age: 35,
-    email: "steveSmith@gmail.com"
-  }
+  // var person = {
+  //   name: "Steve Smith",
+  //   age: 35,
+  //   email: "steveSmith@gmail.com"
+  // }
 
-  var person2 = {
-    name: "Will Smith",
-    age: 35,
-    email: "steveSmith@gmail.com"
-  }
+  // var person2 = {
+  //   name: "Will Smith",
+  //   age: 35,
+  //   email: "steveSmith@gmail.com"
+  // }
 
-  var whiteBg = {
-    backgroundColor : "white",
-    color : "grey",
-    padding : "30px",
-    marginBottom : "20px"
-  }
+  // var whiteBg = {
+  //   backgroundColor : "white",
+  //   color : "grey",
+  //   padding : "30px",
+  //   marginBottom : "20px"
+  // }
   return (
     <div className="App">
       <header className="App-header">
@@ -59,14 +59,8 @@ function Person() {
     color : "#fff",
     border : "none",
     borderRadius : "5px",
-    fontWeight : "600",
+    fontWeight : "400",
     fontSize : "1rem"
-  }
-
-  const buttonStyleHover = {
-    backgroundColor : "#111",
-    color : "#fff",
-    borderRadius : "50px",
   }
 
   function clickHandle (e) {
@@ -76,7 +70,7 @@ function Person() {
   return(
     <div style = {personStyle}>
       <h1>Sakib Al Hasan</h1>
-      <button style = {buttonStyle} onMouseEnter = {buttonStyleHover} onClick = {clickHandle}>Best all rounder in the world</button>
+      <button style = {buttonStyle} onClick = {clickHandle}>Best all rounder in the world</button>
     </div>
   )
 }
