@@ -18,14 +18,32 @@ function App() {
       name: "Lightroom",
       description : "Lorem ipsum, dolor.",
       price : "$99"
+    },
+    {
+      name: "Indesign",
+      description : "Lorem ipsum, dolor.",
+      price : "$119"
+    },
+    {
+      name: "Premiere Pro",
+      description : "Lorem ipsum, dolor.",
+      price : "$139"
     }
   ]
+
+  const productNames = products.map( product => product.name );
+  console.log(productNames);
   return (
     <div className="App">
       <header className="App-header">
-        <Product name = {products[0].name} description = {products[0].description} price = {products[0].price}></Product>
-        <Product name = {products[1].name} description = {products[1].description} price = {products[1].price}></Product>
-        <Product name = {products[2].name} description = {products[2].description} price = {products[2].price}></Product>
+        <ul>
+        {
+          productNames.map(product => <li>{product}</li>)
+        }
+        </ul>
+        {
+          products.map( product => <Product product = {product} ></Product>)
+        }
         {/* <img src={logo} className="App-logo" alt="logo" />
         
         {/* <h4 style={whiteBg}>{ `Name: ${person.name}
@@ -45,7 +63,7 @@ function App() {
 function Product (props) {
 
 const productsStyle = {
-  backgroundColor : "#ddd",
+  backgroundColor : "#fff",
   color : "#111",
   padding : "10px",
   width : "600px",
@@ -55,11 +73,11 @@ const productsStyle = {
   return(
     <div style = {productsStyle}>
       <h6>Name: </h6>
-      <h3>{props.name}</h3>
+      <h3>{props.product.name}</h3>
       <h5>Description: </h5>
-      <p>{props.description}</p>
+      <p>{props.product.description}</p>
       <h4>Price: </h4>
-      <h3>{props.price}</h3>
+      <h3>{props.product.price}</h3>
       <button>Buy Now</button>
 
     </div>
